@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Experience - The Little Owl Cat Café & Rescue</title>
+    <meta name="description" content="Experience our elevated café and rescue sanctuary in Naperville. Glass-separated cat lounge, botanical beverages, wellness classes, and community events.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@400;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 2px 1fr;
+            gap: var(--space-3xl);
+            align-items: start;
+        }
+        
+        .split-divider {
+            background: var(--color-wood);
+            width: 2px;
+            min-height: 300px;
+            margin: var(--space-lg) 0;
+        }
+        
+        .partner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .partner-card {
+            text-align: center;
+            padding: var(--space-lg);
+        }
+        
+        .partner-name {
+            color: #A67A4A;
+            font-weight: var(--font-semibold);
+            font-size: var(--text-lg);
+        }
+        
+        .academy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+        }
+        
+        .academy-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-base);
+        }
+        
+        .academy-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            background: #F5EDE8;
+        }
+        
+        .academy-card-header {
+            background: var(--color-forest);
+            color: var(--color-cream);
+            padding: var(--space-lg);
+            text-align: center;
+        }
+        
+        .academy-card-content {
+            padding: var(--space-xl);
+            color: #525051;
+        }
+        
+        @media (max-width: 768px) {
+            .split-layout {
+                grid-template-columns: 1fr;
+                gap: var(--space-xl);
+            }
+            
+            .split-divider {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER START -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/index" class="site-logo" style="color: #3D5040;">The Little Owl</a>
+                <nav class="nav-links">
+                    <a href="/index" style="color: #3D5040;">Home</a>
+                    <a href="/experience" class="active" style="color: #3D5040;">The Experience</a>
+                    <a href="/adopt" style="color: #3D5040;">Adopt</a>
+                    <a href="/contact" style="color: #3D5040;">Contact & Reserve</a>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="/index" style="color: #3D5040;">Home</a></li>
+                    <li><a href="/experience" style="color: #3D5040;">The Experience</a></li>
+                    <li><a href="/adopt" style="color: #3D5040;">Adopt</a></li>
+                    <li><a href="/contact" style="color: #3D5040;">Contact & Reserve</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- HEADER END -->
+
+    <main>
+        <!-- Hero Section -->
+        <section class="section fade-in" style="background: #3D5040; color: #F5EDE8;">
+            <div class="container">
+                <div class="text-center">
+                    <h1 class="text-5xl font-display" style="color: #F5EDE8;">An Elevated Café + Rescue Experience</h1>
+                    <p class="lead" style="color: #F5EDE8; margin-top: var(--space-lg);">Where every sip supports sanctuary, and every visit creates connection</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Experience Split -->
+        <section class="section fade-in" style="background: #F5EDE8; color: #525051;">
+            <div class="container">
+                <div class="split-layout">
+                    <div class="fade-left">
+                        <h2 class="text-3xl font-display" style="color: #3D5040;">The Café</h2>
+                        <p class="lead">Thoughtfully crafted beverages that nourish body and spirit.</p>
+                        
+                        <h3 class="text-xl font-semibold" style="color: #3D5040; margin-top: var(--space-xl);">Botanical Mocktails</h3>
+                        <p>House-made herbal elixirs featuring lavender, elderflower, and seasonal botanicals. Each blend designed to calm and restore.</p>
+                        
+                        <h3 class="text-xl font-semibold" style="color: #3D5040; margin-top: var(--space-lg);">Specialty Lattes & Matcha</h3>
+                        <p>Single-origin coffee and ceremonial-grade matcha, elevated with house-made syrups and alternative milk options.</p>
+                        
+                        <h3 class="text-xl font-semibold" style="color: #3D5040; margin-top: var(--space-lg);">Wellness Drinks</h3>
+                        <p>Adaptogenic blends, golden milk lattes, and immunity-boosting teas curated for daily vitality.</p>
+                        
+                        <div class="tag" style="margin-top: var(--space-lg);">In partnership with Naperville's finest local bakery</div>
+                    </div>
+                    
+                    <div class="split-divider"></div>
+                    
+                    <div class="fade-right">
+                        <h2 class="text-3xl font-display" style="color: #3D5040;">The Cat Lounge</h2>
+                        <p class="lead">A sanctuary where rescued cats await their forever families.</p>
+                        
+                        <h3 class="text-xl font-semibold" style="color: #3D5040; margin-top: var(--space-xl);">Glass-Separated Design</h3>
+                        <p>Our thoughtfully designed space ensures a calm environment for both cats and guests, with floor-to-ceiling windows providing connection without overwhelm.</p>
+                        
+                        <h3 class="text-xl font-semibold" style="color: #3D5040; margin-top: var(--space-lg);">Reservation-Based Visits</h3>
+                        <p>Intentional 90-minute sessions allow meaningful interactions while respecting our cats' well-being and energy levels.</p>
+                        
+                        <h3 class="text-xl font-semibold" style="color: #3D5040; margin-top: var(--space-lg);">Rescue Connection</h3>
+                        <p>Every cat in our lounge is looking for their perfect match. Our veterinary-trained staff guides potential adopters through the connection process.</p>
+                        
+                        <div class="tag" style="margin-top: var(--space-lg);">All cats health-checked and behaviorally assessed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Partners -->
+        <section class="section fade-in" style="background: #F0DFB0; color: #525051;">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="text-4xl font-display" style="color: #3D5040;">Community Wall</h2>
+                    <p class="lead">Proud to partner with Naperville's finest pet care professionals</p>
+                </div>
+                
+                <div class="partner-grid" style="margin-top: var(--space-3xl);">
+                    <div class="partner-card fade-in">
+                        <div class="partner-name">Whiskers Veterinary Clinic</div>
+                        <p>Comprehensive veterinary care and wellness services for all our rescue cats and community pets.</p>
+                    </div>
+                    
+                    <div class="partner-card fade-in">
+                        <div class="partner-name">Purrfectly Pet Grooming</div>
+                        <p>Expert grooming services helping cats look and feel their absolute best.</p>
+                    </div>
+                    
+                    <div class="partner-card fade-in">
+                        <div class="partner-name">Catfentric Creations</div>
+                        <p>Custom cat furniture, toys, and enrichment items designed for feline happiness.</p>
+                    </div>
+                    
+                    <div class="partner-card fade-in">
+                        <div class="partner-name">Happy Tails Pet Store</div>
+                        <p>Premium pet supplies, nutrition consultation, and everything your feline family needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Little Owl Academy -->
+        <section class="section fade-in" style="background: #F5EDE8; color: #525051;">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="text-4xl font-display" style="color: #3D5040;">Little Owl Academy</h2>
+                    <p class="lead">Educational classes fostering deeper understanding between humans and cats</p>
+                </div>
+                
+                <div class="academy-grid" style="margin-top: var(--space-3xl);">
+                    <div class="academy-card fade-in">
+                        <div class="academy-card-header">
+                            <h3 class="text-xl font-semibold">New Owner & Kitten</h3>
+                        </div>
+                        <div class="academy-card-content">
+                            <p>Everything first-time cat parents need to know about welcoming a kitten home, from setup to socialization.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="academy-card fade-in">
+                        <div class="academy-card-header">
+                            <h3 class="text-xl font-semibold">Behavior & Communication</h3>
+                        </div>
+                        <div class="academy-card-content">
+                            <p>Decode feline body language and create stronger bonds through understanding cat communication patterns.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="academy-card fade-in">
+                        <div class="academy-card-header">
+                            <h3 class="text-xl font-semibold">Multi-Cat Households</h3>
+                        </div>
+                        <div class="academy-card-content">
+                            <p>Navigate the complexities of multiple cats living together harmoniously with expert guidance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="academy-card fade-in">
+                        <div class="academy-card-header">
+                            <h3 class="text-xl font-semibold">Enrichment & Wellness</h3>
+                        </div>
+                        <div class="academy-card-content">
+                            <p>Create a stimulating environment that promotes physical and mental health for indoor cats.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="academy-card fade-in">
+                        <div class="academy-card-header">
+                            <h3 class="text-xl font-semibold">Adoption Preparation</h3>
+                        </div>
+                        <div class="academy-card-content">
+                            <p>Essential preparation for welcoming a rescue cat, including transition strategies and patience practices.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="academy-card fade-in">
+                        <div class="academy-card-header">
+                            <h3 class="text-xl font-semibold">Kids & Family</h3>
+                        </div>
+                        <div class="academy-card-content">
+                            <p>Teaching children safe, respectful interaction with cats while building lifelong empathy for animals.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="academy-card fade-in">
+                        <div class="academy-card-header">
+                            <h3 class="text-xl font-semibold">Health & Husbandry</h3>
+                        </div>
+                        <div class="academy-card-content">
+                            <p>Veterinary-led sessions on preventive care, nutrition, and recognizing health changes in your cat.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: var(--space-3xl);">
+                    <a href="/contact" class="btn btn-primary" style="background: #3D5040; color: #F5EDE8; border-color: #3D5040;">Book a Class</a>
+                    <a href="/contact" class="btn btn-outline" style="margin-left: var(--space-md); color: #3D5040; border-color: #3D5040;">Browse Events</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER START -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Visit Us</h3>
+                    <ul class="footer-links">
+                        <li><strong>Naperville, IL</strong></li>
+                        <li>630-768-4424</li>
+                        <li>cnovak626@gmail.com</li>
+                        <li>@littleowl.catcafe</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Experience</h3>
+                    <ul class="footer-links">
+                        <li><a href="/experience">The Café</a></li>
+                        <li><a href="/experience">Cat Lounge</a></li>
+                        <li><a href="/experience">Events & Classes</a></li>
+                        <li><a href="/experience">Private Parties</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Adoption</h3>
+                    <ul class="footer-links">
+                        <li><a href="/adopt">Available Cats</a></li>
+                        <li><a href="/adopt">Adoption Process</a></li>
+                        <li><a href="/adopt">Foster Program</a></li>
+                        <li><a href="/adopt">Volunteer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="/contact">Contact & Reserve</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Little Owl Cat Café & Rescue. Veterinary-led. Woman-owned. Est. 2026.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var allAnimated = document.querySelectorAll('.fade-in, .fade-left, .fade-right');
+        allAnimated.forEach(function(el) { el.classList.add('visible'); });
+
+        if ('IntersectionObserver' in window) {
+            var belowFold = [];
+            allAnimated.forEach(function(el) {
+                if (el.getBoundingClientRect().top > window.innerHeight) {
+                    el.classList.remove('visible');
+                    belowFold.push(el);
+                }
+            });
+            if (belowFold.length > 0) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                belowFold.forEach(function(el) { observer.observe(el); });
+            }
+        }
+
+        var toggle = document.querySelector('.mobile-menu-toggle');
+        var mobileNav = document.querySelector('.mobile-nav');
+        if (toggle && mobileNav) {
+            toggle.addEventListener('click', function() { mobileNav.classList.toggle('open'); });
+        }
+
+        var header = document.querySelector('.site-header');
+        if (header) {
+            window.addEventListener('scroll', function() {
+                header.classList.toggle('scrolled', window.scrollY > 10);
+            });
+        }
+    });
+    </script>
+</body>
+</html>

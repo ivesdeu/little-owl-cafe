@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Little Owl Cat Café & Rescue - Where Cats • Coffee • Community Meet</title>
+    <meta name="description" content="The Little Owl Cat Café & Rescue is an elevated café and rescue experience in Naperville, Illinois. Veterinary-led and woman-owned, we're building a space where cats find homes and guests find comfort.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Dancing+Script:wght@400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .stats-counter {
+            font-size: var(--text-4xl);
+            font-weight: var(--font-bold);
+            font-family: var(--font-display);
+            color: var(--color-gold);
+            display: block;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .event-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .event-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--color-blush);
+        }
+        
+        .cta-banner {
+            text-align: center;
+            padding: var(--space-3xl) 0;
+        }
+
+        /* Fix contrast issues */
+        .site-header {
+            background: rgba(61, 80, 64, 0.95) !important;
+        }
+
+        .site-header .nav-links a {
+            color: #F5EDE8 !important;
+        }
+
+        .site-header .site-logo {
+            color: #F5EDE8 !important;
+        }
+
+        .btn {
+            font-weight: 600 !important;
+        }
+
+        .btn-primary {
+            background: #3D5040 !important;
+            color: #F5EDE8 !important;
+            border-color: #3D5040 !important;
+        }
+
+        .btn-secondary {
+            background: #A57C4A !important;
+            color: #F5EDE8 !important;
+            border-color: #A57C4A !important;
+        }
+
+        .btn-outline {
+            background: #3D5040 !important;
+            color: #F5EDE8 !important;
+            border-color: #3D5040 !important;
+        }
+        
+        @media (max-width: 767px) {
+            .hero h1 {
+                font-size: var(--text-4xl);
+            }
+            .stats-counter {
+                font-size: var(--text-3xl);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER START -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/index" class="site-logo">The Little Owl</a>
+                <nav class="nav-links">
+                    <a href="/index" class="active">Home</a>
+                    <a href="/experience">The Experience</a>
+                    <a href="/adopt">Adopt</a>
+                    <a href="/contact">Contact & Reserve</a>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/experience">The Experience</a></li>
+                    <li><a href="/adopt">Adopt</a></li>
+                    <li><a href="/contact">Contact & Reserve</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- HEADER END -->
+
+    <main>
+        <section class="hero section fade-in" style="background: #F5EDE8; color: #525051;">
+            <div class="container">
+                <h1 style="color: #3D5040;">Where Cats • Coffee • Community Meet</h1>
+                <p class="lead" style="color: #525051; margin-bottom: var(--space-2xl);">The Little Owl Cat Café & Rescue is an elevated café and rescue experience in Naperville, Illinois. Veterinary-led and woman-owned, we're building a space where cats find homes and guests find comfort.</p>
+                <div class="flex-center" style="gap: var(--space-lg); flex-wrap: wrap;">
+                    <a href="/contact" class="btn btn-primary">Reserve Your Visit</a>
+                    <a href="/adopt" class="btn btn-secondary">Meet the Cats</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section fade-in" style="background: #3D5040; color: #F5EDE8;">
+            <div class="container">
+                <div class="grid-3">
+                    <div class="card fade-left" style="background: rgba(245, 237, 232, 0.1); border-color: rgba(165, 124, 74, 0.3); text-align: center;">
+                        <div style="width: 60px; height: 60px; background: var(--color-sage); border-radius: var(--radius-full); margin: 0 auto var(--space-lg); display: flex; align-items: center; justify-content: center; color: var(--color-cream); font-size: var(--text-2xl);">☕</div>
+                        <h3 style="color: #F5EDE8;">The Café</h3>
+                        <p style="color: #F5EDE8; opacity: 0.9;">Specialty beverages, botanical mocktails, and wellness drinks crafted with intention. Our café space offers a peaceful retreat from the everyday.</p>
+                    </div>
+                    <div class="card fade-in" style="background: rgba(245, 237, 232, 0.1); border-color: rgba(165, 124, 74, 0.3); text-align: center;">
+                        <div style="width: 60px; height: 60px; background: var(--color-sage); border-radius: var(--radius-full); margin: 0 auto var(--space-lg); display: flex; align-items: center; justify-content: center; color: var(--color-cream); font-size: var(--text-2xl);">🐱</div>
+                        <h3 style="color: #F5EDE8;">The Cat Lounge</h3>
+                        <p style="color: #F5EDE8; opacity: 0.9;">Glass-separated sanctuary where adoptable rescue cats roam freely. Watch, play, and fall in love while they search for their forever homes.</p>
+                    </div>
+                    <div class="card fade-right" style="background: rgba(245, 237, 232, 0.1); border-color: rgba(165, 124, 74, 0.3); text-align: center;">
+                        <div style="width: 60px; height: 60px; background: var(--color-sage); border-radius: var(--radius-full); margin: 0 auto var(--space-lg); display: flex; align-items: center; justify-content: center; color: var(--color-cream); font-size: var(--text-2xl);">❤️</div>
+                        <h3 style="color: #F5EDE8;">The Community</h3>
+                        <p style="color: #F5EDE8; opacity: 0.9;">Yoga with cats, painting nights, storytime, and educational classes. Building connections between neighbors, cats, and causes that matter.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section fade-in" style="background: #3D5040; color: #F5EDE8;">
+            <div class="container" style="text-align: center;">
+                <div class="grid-4">
+                    <div class="fade-left">
+                        <span class="stats-counter">127</span>
+                        <p style="color: #F5EDE8; margin: 0; font-weight: var(--font-medium);">Cats Rescued</p>
+                    </div>
+                    <div class="fade-in">
+                        <span class="stats-counter">48</span>
+                        <p style="color: #F5EDE8; margin: 0; font-weight: var(--font-medium);">Events Hosted</p>
+                    </div>
+                    <div class="fade-in">
+                        <span class="stats-counter">23</span>
+                        <p style="color: #F5EDE8; margin: 0; font-weight: var(--font-medium);">Academy Classes</p>
+                    </div>
+                    <div class="fade-right">
+                        <span class="stats-counter">15</span>
+                        <p style="color: #F5EDE8; margin: 0; font-weight: var(--font-medium);">Local Partners</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section fade-in" style="background: #EBF2EC; color: #525051;">
+            <div class="container">
+                <div class="grid-2" style="align-items: center;">
+                    <div class="fade-left">
+                        <h2 style="color: #3D5040;">Our Mission</h2>
+                        <p class="lead">Veterinary-led and woman-owned, The Little Owl represents a new approach to cat rescue and community building.</p>
+                        <p>Founded by Christina Novak in 2026, we believe that healing happens in beautiful spaces where both cats and humans feel valued. Every cup of coffee sold supports our rescue efforts. Every class taught builds understanding. Every adoption celebrated creates ripples of compassion throughout Naperville and beyond.</p>
+                        <p>We're not just a business—we're a movement toward intentional living, mindful community, and the belief that small acts of care can change everything.</p>
+                    </div>
+                    <div class="fade-right">
+                        <img src="https://placehold.co/500x600/8DA08A/F5EDE8?text=Christina+%26+Rescue+Cats" alt="Christina Novak with rescued cats" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section fade-in" style="background: #F0DFB0; color: #525051;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: var(--space-3xl);">
+                    <h2 style="color: #3D5040;">Upcoming Events</h2>
+                    <p class="lead">Join us for experiences that nourish both community and cats</p>
+                </div>
+                <div class="grid-3">
+                    <div class="event-card card fade-left">
+                        <img src="https://placehold.co/300x200/8DA08A/F5EDE8?text=Yoga+with+Cats" alt="Yoga with cats session" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: var(--space-lg);">
+                        <div class="tag" style="margin-bottom: var(--space-sm);">Saturday Morning</div>
+                        <h4 style="color: #3D5040; margin-bottom: var(--space-sm);">Yoga with the Cats</h4>
+                        <p style="margin-bottom: var(--space-lg);">Flow through gentle poses while rescue cats roam freely around you. Find your center in their calming presence.</p>
+                        <a href="/contact" class="btn btn-outline">Reserve Spot</a>
+                    </div>
+                    <div class="event-card card fade-in">
+                        <img src="https://placehold.co/300x200/C5A076/F5EDE8?text=Painting+Night" alt="Painting night with cats" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: var(--space-lg);">
+                        <div class="tag" style="margin-bottom: var(--space-sm);">Friday Evening</div>
+                        <h4 style="color: #3D5040; margin-bottom: var(--space-sm);">Painting Night</h4>
+                        <p style="margin-bottom: var(--space-lg);">Create art inspired by our resident cats. All supplies provided, plus wine and light bites for a perfect creative evening.</p>
+                        <a href="/contact" class="btn btn-outline">Join Us</a>
+                    </div>
+                    <div class="event-card card fade-right">
+                        <img src="https://placehold.co/300x200/A57C4A/F5EDE8?text=Storytime" alt="Children reading to cats" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: var(--space-lg);">
+                        <div class="tag" style="margin-bottom: var(--space-sm);">Sunday Afternoon</div>
+                        <h4 style="color: #3D5040; margin-bottom: var(--space-sm);">Storytime & Book Club</h4>
+                        <p style="margin-bottom: var(--space-lg);">Children read aloud to cats who make the perfect non-judgmental audience. Building confidence and compassion together.</p>
+                        <a href="/contact" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-banner fade-in" style="background: #8DA08A; color: #F5EDE8;">
+            <div class="container">
+                <h2 style="color: #F5EDE8; margin-bottom: var(--space-lg);">Ready to Experience The Little Owl?</h2>
+                <p class="lead" style="color: #F5EDE8; opacity: 0.9; margin-bottom: var(--space-xl);">Reserve your visit to our café and cat lounge. Every visit supports rescue efforts and community programs.</p>
+                <a href="/contact" class="btn" style="background: var(--color-gold); color: var(--color-cream); border-color: var(--color-gold); font-size: var(--text-lg); padding: var(--space-md) var(--space-2xl);">Reserve Your Visit</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER START -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Visit Us</h3>
+                    <ul class="footer-links">
+                        <li><strong>Naperville, IL</strong></li>
+                        <li>630-768-4424</li>
+                        <li>cnovak626@gmail.com</li>
+                        <li>@littleowl.catcafe</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Experience</h3>
+                    <ul class="footer-links">
+                        <li><a href="/experience">The Café</a></li>
+                        <li><a href="/experience">Cat Lounge</a></li>
+                        <li><a href="/experience">Events & Classes</a></li>
+                        <li><a href="/experience">Private Parties</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Adoption</h3>
+                    <ul class="footer-links">
+                        <li><a href="/adopt">Available Cats</a></li>
+                        <li><a href="/adopt">Adoption Process</a></li>
+                        <li><a href="/adopt">Foster Program</a></li>
+                        <li><a href="/adopt">Volunteer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="/contact">Contact & Reserve</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Little Owl Cat Café & Rescue. Veterinary-led. Woman-owned. Est. 2026.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var allAnimated = document.querySelectorAll('.fade-in, .fade-left, .fade-right');
+      allAnimated.forEach(function(el) { el.classList.add('visible'); });
+
+      if ('IntersectionObserver' in window) {
+        var belowFold = [];
+        allAnimated.forEach(function(el) {
+          if (el.getBoundingClientRect().top > window.innerHeight) {
+            el.classList.remove('visible');
+            belowFold.push(el);
+          }
+        });
+        if (belowFold.length > 0) {
+          var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1 });
+          belowFold.forEach(function(el) { observer.observe(el); });
+        }
+      }
+
+      var toggle = document.querySelector('.mobile-menu-toggle');
+      var mobileNav = document.querySelector('.mobile-nav');
+      if (toggle && mobileNav) {
+        toggle.addEventListener('click', function() { mobileNav.classList.toggle('active'); });
+      }
+
+      var header = document.querySelector('.site-header');
+      if (header) {
+        window.addEventListener('scroll', function() {
+          header.classList.toggle('scrolled', window.scrollY > 10);
+        });
+      }
+    });
+    </script>
+</body>
+</html>

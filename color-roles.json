@@ -1,0 +1,48 @@
+{
+  "colorRoles": {
+    "primary-bg": "#F5EDE8",
+    "secondary-bg": "#EBF2EC",
+    "contrast-bg": "#3D5040",
+    "heading-on-primary": "#3D5040",
+    "heading-on-contrast": "#F5EDE8",
+    "body-on-primary": "#525051",
+    "body-on-contrast": "#F5EDE8",
+    "primary-accent": "#A57C4A",
+    "secondary-accent": "#8DA08A"
+  },
+  "scenes": {
+    "A": {
+      "label": "Warm Default",
+      "background": "#F5EDE8",
+      "heading": "#3D5040",
+      "body": "#525051",
+      "accent": "#A57C4A",
+      "css": "background: #F5EDE8; color: #525051;"
+    },
+    "B": {
+      "label": "Sage Breathing Room",
+      "background": "#EBF2EC",
+      "heading": "#3D5040",
+      "body": "#525051",
+      "accent": "#A57C4A",
+      "css": "background: #EBF2EC; color: #525051;"
+    },
+    "C": {
+      "label": "Forest Sanctuary",
+      "background": "#3D5040",
+      "heading": "#F5EDE8",
+      "body": "#F5EDE8",
+      "accent": "#F2CAC0",
+      "css": "background: #3D5040; color: #F5EDE8;"
+    }
+  },
+  "pageRhythm": [
+    "A",
+    "C",
+    "A",
+    "B",
+    "A",
+    "C"
+  ],
+  "rhythmRule": "Scene C no more than twice per page, never back to back. Scene B breaks up long stretches of Scene A. Scene C reserved for hero sections, footer, and key conversion moments."
+}

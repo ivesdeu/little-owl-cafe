@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt - The Little Owl Cat Café & Rescue</title>
+    <meta name="description" content="Find your purrfect match at The Little Owl Cat Café & Rescue. Browse our adoptable cats and learn about our adoption process in Naperville, IL.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@400;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .adoption-steps {
+            position: relative;
+        }
+        
+        .adoption-steps .grid-3 {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-card {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--color-gold);
+            color: var(--color-cream);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: var(--text-3xl);
+            font-weight: var(--font-bold);
+            margin: 0 auto var(--space-lg) auto;
+        }
+        
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--color-sage);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-lg) auto;
+            font-size: var(--text-2xl);
+        }
+        
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-2xl);
+        }
+        
+        .cat-card {
+            background: var(--color-cream);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            transition: var(--transition-base);
+        }
+        
+        .cat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-blush);
+        }
+        
+        .cat-image {
+            width: 100%;
+            height: 250px;
+            background: var(--color-sage-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-lg);
+            color: var(--color-sage);
+        }
+        
+        .cat-info {
+            padding: var(--space-lg);
+        }
+        
+        .cat-name {
+            font-family: var(--font-display);
+            font-size: var(--text-xl);
+            font-weight: var(--font-semibold);
+            color: var(--color-forest);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .cat-age {
+            color: var(--color-gold);
+            font-weight: var(--font-medium);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .cat-personality {
+            color: var(--color-charcoal);
+            line-height: var(--leading-relaxed);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .adoption-process-list {
+            list-style: none;
+            padding: 0;
+            margin: var(--space-2xl) 0 0 0;
+        }
+        
+        .adoption-process-list li {
+            padding: var(--space-lg) 0;
+            border-bottom: 1px solid rgba(245, 237, 232, 0.2);
+            position: relative;
+            padding-left: var(--space-3xl);
+        }
+        
+        .adoption-process-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: var(--space-lg);
+            width: var(--space-xl);
+            height: var(--space-xl);
+            background: var(--color-blush);
+            color: var(--color-forest);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: var(--font-bold);
+        }
+        
+        .adoption-process-list li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER START -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/index" class="site-logo" style="color: #3D5040; font-weight: 700;">The Little Owl</a>
+                <nav class="nav-links">
+                    <a href="/index" style="color: #3D5040; font-weight: 600;">Home</a>
+                    <a href="/experience" style="color: #3D5040; font-weight: 600;">The Experience</a>
+                    <a href="/adopt" class="active" style="color: #3D5040; font-weight: 600;">Adopt</a>
+                    <a href="/contact" style="color: #3D5040; font-weight: 600;">Contact & Reserve</a>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="/index" style="color: #3D5040;">Home</a></li>
+                    <li><a href="/experience" style="color: #3D5040;">The Experience</a></li>
+                    <li><a href="/adopt" style="color: #3D5040;">Adopt</a></li>
+                    <li><a href="/contact" style="color: #3D5040;">Contact & Reserve</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- HEADER END -->
+
+    <main>
+        <!-- Hero Section -->
+        <section class="section fade-in" style="background: #F5EDE8; color: #525051;">
+            <div class="container">
+                <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <h1 style="font-family: var(--font-display); font-size: var(--text-5xl); font-weight: var(--font-bold); color: var(--color-forest); margin-bottom: var(--space-lg); line-height: var(--leading-tight);">Find Your Purrfect Match</h1>
+                    <p class="lead" style="color: var(--color-charcoal); margin-bottom: var(--space-2xl);">Every cat at The Little Owl has a story waiting to unfold with the right family. Our veterinary-led rescue approach ensures each feline friend is healthy, socialized, and ready to bring joy to their forever home. Browse our available cats and discover your new companion.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adoption Steps -->
+        <section class="section adoption-steps fade-in" style="background: #EBF2EC; color: #3D5040;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: var(--space-4xl);">
+                    <h2 style="font-family: var(--font-display); font-size: var(--text-4xl); font-weight: var(--font-semibold); color: var(--color-forest); margin-bottom: var(--space-lg);">Your Adoption Journey</h2>
+                    <p class="lead">Three simple steps to finding your new best friend</p>
+                </div>
+                
+                <div class="grid-3">
+                    <div class="step-card fade-left">
+                        <div class="step-number">1</div>
+                        <h3 style="font-family: var(--font-display); font-size: var(--text-xl); font-weight: var(--font-semibold); color: var(--color-forest); margin-bottom: var(--space-md);">Visit the Lounge</h3>
+                        <p>Enjoy a specialty beverage while observing our cats in their comfortable sanctuary. Get a feel for their personalities and see who catches your eye.</p>
+                    </div>
+                    
+                    <div class="step-card fade-in">
+                        <div class="step-number">2</div>
+                        <h3 style="font-family: var(--font-display); font-size: var(--text-xl); font-weight: var(--font-semibold); color: var(--color-forest); margin-bottom: var(--space-md);">Meet the Cats</h3>
+                        <p>Spend quality time with cats that interest you. Our staff will share their stories, care needs, and help you find the perfect personality match.</p>
+                    </div>
+                    
+                    <div class="step-card fade-right">
+                        <div class="step-number">3</div>
+                        <h3 style="font-family: var(--font-display); font-size: var(--text-xl); font-weight: var(--font-semibold); color: var(--color-forest); margin-bottom: var(--space-md);">Take One Home</h3>
+                        <p>Complete our streamlined adoption process and welcome your new family member home with all the supplies and support you need.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Available Cats -->
+        <section class="section fade-in" style="background: #F5EDE8; color: #525051;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: var(--space-4xl);">
+                    <h2 style="font-family: var(--font-display); font-size: var(--text-4xl); font-weight: var(--font-semibold); color: var(--color-forest); margin-bottom: var(--space-lg);">Meet Our Available Cats</h2>
+                    <p class="lead">Each of these wonderful cats is looking for their forever home</p>
+                </div>
+
+                <div class="cat-grid">
+                    <div class="cat-card fade-left">
+                        <div class="cat-image">
+                            <img src="https://placehold.co/280x250/EBF2EC/8DA08A?text=Luna" alt="Luna" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="cat-info">
+                            <h3 class="cat-name">Luna</h3>
+                            <p class="cat-age">2 years old</p>
+                            <p class="cat-personality">A gentle soul who loves quiet afternoons and gentle pets. Luna is perfect for someone looking for a calm, affectionate companion who enjoys watching the world go by from a sunny windowsill.</p>
+                        </div>
+                    </div>
+
+                    <div class="cat-card fade-in">
+                        <div class="cat-image">
+                            <img src="https://placehold.co/280x250/EBF2EC/8DA08A?text=Milo" alt="Milo" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="cat-info">
+                            <h3 class="cat-name">Milo</h3>
+                            <p class="cat-age">4 years old</p>
+                            <p class="cat-personality">Playful and curious, Milo loves interactive toys and exploring every corner of his space. He's great with families and would thrive in a home with plenty of enrichment activities.</p>
+                        </div>
+                    </div>
+
+                    <div class="cat-card fade-right">
+                        <div class="cat-image">
+                            <img src="https://placehold.co/280x250/EBF2EC/8DA08A?text=Sage" alt="Sage" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="cat-info">
+                            <h3 class="cat-name">Sage</h3>
+                            <p class="cat-age">6 months old</p>
+                            <p class="cat-personality">This little kitten is full of energy and love. Sage is social, adaptable, and ready to grow up with a family who can provide lots of love, play, and patient training.</p>
+                        </div>
+                    </div>
+
+                    <div class="cat-card fade-left">
+                        <div class="cat-image">
+                            <img src="https://placehold.co/280x250/EBF2EC/8DA08A?text=Oliver" alt="Oliver" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="cat-info">
+                            <h3 class="cat-name">Oliver</h3>
+                            <p class="cat-age">7 years old</p>
+                            <p class="cat-personality">A distinguished gentleman who appreciates the finer things in life. Oliver enjoys routine, gentle affection, and being the only cat in the household where he can reign supreme.</p>
+                        </div>
+                    </div>
+
+                    <div class="cat-card fade-in">
+                        <div class="cat-image">
+                            <img src="https://placehold.co/280x250/EBF2EC/8DA08A?text=Willow" alt="Willow" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="cat-info">
+                            <h3 class="cat-name">Willow</h3>
+                            <p class="cat-age">3 years old</p>
+                            <p class="cat-personality">Independent but loving, Willow is perfect for someone who respects her space but enjoys her affectionate moments. She's content to be near you while you work or read.</p>
+                        </div>
+                    </div>
+
+                    <div class="cat-card fade-right">
+                        <div class="cat-image">
+                            <img src="https://placehold.co/280x250/EBF2EC/8DA08A?text=Felix" alt="Felix" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="cat-info">
+                            <h3 class="cat-name">Felix</h3>
+                            <p class="cat-age">5 years old</p>
+                            <p class="cat-personality">A true lap cat who loves attention and being the center of your world. Felix is social, vocal, and would be happiest in a home where someone is around to appreciate his charming personality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adoption Process -->
+        <section class="section fade-in" style="background: #3D5040; color: #F5EDE8;">
+            <div class="container">
+                <div class="grid-2" style="align-items: center; gap: var(--space-4xl);">
+                    <div class="fade-left">
+                        <h2 style="font-family: var(--font-display); font-size: var(--text-4xl); font-weight: var(--font-semibold); color: var(--color-cream); margin-bottom: var(--space-lg);">Our Adoption Process</h2>
+                        <p class="lead" style="color: var(--color-cream); margin-bottom: var(--space-xl);">We've designed our adoption process to be thorough yet welcoming, ensuring the best match for both you and your new feline friend.</p>
+                        
+                        <ul class="adoption-process-list">
+                            <li>
+                                <h4 style="color: var(--color-cream); margin-bottom: var(--space-xs);">Visit & Connect</h4>
+                                <p style="color: var(--color-cream);">Spend time in our lounge meeting our available cats and finding your connection.</p>
+                            </li>
+                            <li>
+                                <h4 style="color: var(--color-cream); margin-bottom: var(--space-xs);">Application & Interview</h4>
+                                <p style="color: var(--color-cream);">Complete our adoption application and have a brief conversation with our team.</p>
+                            </li>
+                            <li>
+                                <h4 style="color: var(--color-cream); margin-bottom: var(--space-xs);">Home Preparation</h4>
+                                <p style="color: var(--color-cream);">We'll help you prepare your home and provide guidance on supplies and setup.</p>
+                            </li>
+                            <li>
+                                <h4 style="color: var(--color-cream); margin-bottom: var(--space-xs);">Welcome Home</h4>
+                                <p style="color: var(--color-cream);">Take your new family member home with ongoing support from our team.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="fade-right" style="text-align: center;">
+                        <div style="background: rgba(245, 237, 232, 0.1); border-radius: var(--radius-xl); padding: var(--space-3xl); border: 1px solid rgba(245, 237, 232, 0.2);">
+                            <h3 style="font-family: var(--font-display); font-size: var(--text-2xl); color: var(--color-cream); margin-bottom: var(--space-lg);">Adoption Fees</h3>
+                            <p style="color: var(--color-cream); margin-bottom: var(--space-lg);">All cats come spayed/neutered, vaccinated, microchipped, and health-checked by our veterinary team.</p>
+                            <div style="margin-bottom: var(--space-xl);">
+                                <p style="color: var(--color-blush); font-size: var(--text-lg); margin-bottom: var(--space-sm);">Kittens (under 1 year): <strong style="color: var(--color-cream);">$150</strong></p>
+                                <p style="color: var(--color-blush); font-size: var(--text-lg); margin-bottom: var(--space-sm);">Adult cats (1-7 years): <strong style="color: var(--color-cream);">$100</strong></p>
+                                <p style="color: var(--color-blush); font-size: var(--text-lg);">Senior cats (7+ years): <strong style="color: var(--color-cream);">$75</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section fade-in" style="background: #F5EDE8; color: #525051;">
+            <div class="container">
+                <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                    <h2 style="font-family: var(--font-display); font-size: var(--text-4xl); font-weight: var(--font-semibold); color: var(--color-forest); margin-bottom: var(--space-lg);">Ready to Meet Your New Best Friend?</h2>
+                    <p class="lead" style="margin-bottom: var(--space-2xl);">Visit us today to meet our wonderful cats and start your adoption journey. No appointment necessary for browsing, but feel free to call ahead if you have questions.</p>
+                    <a href="/contact" class="btn btn-primary" style="margin-right: var(--space-md); background: #3D5040; color: #F5EDE8; font-weight: 600; text-decoration: none; padding: 12px 24px; border-radius: 6px; display: inline-block;">Start Your Adoption Journey</a>
+                    <a href="/contact" class="btn btn-outline" style="border: 2px solid #3D5040; color: #3D5040; font-weight: 600; text-decoration: none; padding: 10px 22px; border-radius: 6px; display: inline-block;">Visit the Lounge</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER START -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Visit Us</h3>
+                    <ul class="footer-links">
+                        <li><strong>Naperville, IL</strong></li>
+                        <li>630-768-4424</li>
+                        <li>cnovak626@gmail.com</li>
+                        <li>@littleowl.catcafe</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Experience</h3>
+                    <ul class="footer-links">
+                        <li><a href="/experience">The Café</a></li>
+                        <li><a href="/experience">Cat Lounge</a></li>
+                        <li><a href="/experience">Events & Classes</a></li>
+                        <li><a href="/experience">Private Parties</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Adoption</h3>
+                    <ul class="footer-links">
+                        <li><a href="/adopt">Available Cats</a></li>
+                        <li><a href="/adopt">Adoption Process</a></li>
+                        <li><a href="/adopt">Foster Program</a></li>
+                        <li><a href="/adopt">Volunteer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="/contact">Contact & Reserve</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Little Owl Cat Café & Rescue. Veterinary-led. Woman-owned. Est. 2026.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var allAnimated = document.querySelectorAll('.fade-in, .fade-left, .fade-right');
+        allAnimated.forEach(function(el) { el.classList.add('visible'); });
+
+        if ('IntersectionObserver' in window) {
+            var belowFold = [];
+            allAnimated.forEach(function(el) {
+                if (el.getBoundingClientRect().top > window.innerHeight) {
+                    el.classList.remove('visible');
+                    belowFold.push(el);
+                }
+            });
+            if (belowFold.length > 0) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                belowFold.forEach(function(el) { observer.observe(el); });
+            }
+        }
+
+        var toggle = document.querySelector('.mobile-menu-toggle');
+        var mobileNav = document.querySelector('.mobile-nav');
+        if (toggle && mobileNav) {
+            toggle.addEventListener('click', function() { mobileNav.classList.toggle('open'); });
+        }
+
+        var header = document.querySelector('.site-header');
+        if (header) {
+            window.addEventListener('scroll', function() {
+                header.classList.toggle('scrolled', window.scrollY > 10);
+            });
+        }
+    });
+    </script>
+</body>
+</html>

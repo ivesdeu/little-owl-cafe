@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Reserve - The Little Owl Cat Café & Rescue</title>
+    <meta name="description" content="Contact The Little Owl Cat Café & Rescue in Naperville. Reserve your table, ask questions, or schedule a visit. Veterinary-led and woman-owned.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .contact-card {
+            background: white;
+            border: 2px solid var(--color-wood);
+            border-radius: var(--radius-lg);
+            padding: var(--space-2xl);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: var(--font-medium);
+            margin-bottom: var(--space-sm);
+            color: var(--color-forest);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: var(--space-md);
+            border: 2px solid var(--color-border);
+            border-radius: var(--radius-md);
+            font-family: var(--font-body);
+            font-size: var(--text-base);
+            transition: var(--transition-base);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-sage);
+            box-shadow: 0 0 0 3px rgba(141, 160, 138, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .contact-info {
+            text-align: center;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+            font-size: var(--text-lg);
+        }
+        
+        .contact-detail:last-child {
+            margin-bottom: 0;
+        }
+        
+        .hero-cta {
+            text-align: center;
+            margin-top: var(--space-2xl);
+        }
+        
+        .hero-cta .btn-primary {
+            font-size: var(--text-xl);
+            padding: var(--space-lg) var(--space-3xl);
+            background: var(--color-forest);
+            color: white;
+        }
+        
+        .btn-primary {
+            background: var(--color-forest);
+            color: white;
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--color-forest);
+            color: var(--color-forest);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-card {
+                padding: var(--space-xl);
+            }
+            
+            .hero-cta .btn-primary {
+                font-size: var(--text-lg);
+                padding: var(--space-md) var(--space-2xl);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER START -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/index" class="site-logo" style="color: #3D5040;">The Little Owl</a>
+                <nav class="nav-links">
+                    <a href="/index" style="color: #3D5040;">Home</a>
+                    <a href="/experience" style="color: #3D5040;">The Experience</a>
+                    <a href="/adopt" style="color: #3D5040;">Adopt</a>
+                    <a href="/contact" class="active" style="color: #3D5040;">Contact & Reserve</a>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/experience">The Experience</a></li>
+                    <li><a href="/adopt">Adopt</a></li>
+                    <li><a href="/contact">Contact & Reserve</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- HEADER END -->
+
+    <main>
+        <!-- Hero Section -->
+        <section class="section fade-in" style="background: #F5EDE8; color: #525051;">
+            <div class="container">
+                <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <h1 style="color: #3D5040; font-size: var(--text-6xl); margin-bottom: var(--space-lg);">Stay a Little Longer</h1>
+                    <p class="lead" style="margin-bottom: var(--space-xl);">Ready to experience The Little Owl? Reserve your table, ask us anything, or simply say hello. We're here to make your visit perfect.</p>
+                    
+                    <div class="hero-cta">
+                        <a href="#reserve" class="btn-primary">Reserve Your Table</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="section fade-in" style="background: #3D5040; color: #F5EDE8;">
+            <div class="container">
+                <div class="grid-2" style="align-items: center; gap: var(--space-4xl);">
+                    <div class="contact-info">
+                        <h2 style="color: #F5EDE8; margin-bottom: var(--space-2xl);">Let's Connect</h2>
+                        
+                        <div class="contact-card">
+                            <h3 style="color: #3D5040; margin-bottom: var(--space-xl);">Christina Novak</h3>
+                            <p style="color: #525051; font-style: italic; margin-bottom: var(--space-lg);">Founder & Veterinary Lead</p>
+                            
+                            <div class="contact-detail">
+                                <span>📞</span>
+                                <a href="tel:630-768-4424" style="color: #A57C4A; text-decoration: none;">630-768-4424</a>
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <span>✉️</span>
+                                <a href="mailto:cnovak626@gmail.com" style="color: #A57C4A; text-decoration: none;">cnovak626@gmail.com</a>
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <span>📍</span>
+                                <span style="color: #525051;">Naperville, IL</span>
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <span>📸</span>
+                                <a href="#" style="color: #A57C4A; text-decoration: none;">@littleowl.catcafe</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <img src="https://placehold.co/600x500/F5EDE8/3D5040?text=Café+Interior" alt="The Little Owl interior" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="reserve" class="section fade-in" style="background: #EBF2EC; color: #525051;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: var(--space-4xl);">
+                    <h2 style="color: #3D5040; margin-bottom: var(--space-lg);">Send Us a Message</h2>
+                    <p class="lead">Whether you're planning a visit, interested in adoption, or have questions about our classes and events, we'd love to hear from you.</p>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="grid-2" style="gap: var(--space-lg);">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" style="width: 100%; padding: var(--space-md); border: 2px solid var(--color-border); border-radius: var(--radius-md); font-family: var(--font-body); font-size: var(--text-base);">
+                            <option value="">Select a topic</option>
+                            <option value="reservation">Table Reservation</option>
+                            <option value="adoption">Cat Adoption</option>
+                            <option value="events">Classes & Events</option>
+                            <option value="parties">Private Parties</option>
+                            <option value="volunteer">Volunteering</option>
+                            <option value="general">General Questions</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your visit plans, questions, or how we can help make your experience perfect..." required></textarea>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn-primary" style="padding: var(--space-md) var(--space-3xl);">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Hours & Location Info -->
+        <section class="section fade-in" style="background: #F5EDE8; color: #525051;">
+            <div class="container">
+                <div class="grid-3" style="gap: var(--space-4xl);">
+                    <div style="text-align: center;">
+                        <h3 style="color: #3D5040; margin-bottom: var(--space-lg);">Coming Soon</h3>
+                        <p>The Little Owl is opening in 2026 in beautiful Naperville, Illinois. Sign up for updates to be the first to know about our grand opening.</p>
+                        <div style="margin-top: var(--space-lg);">
+                            <span class="badge" style="background: var(--color-gold); color: white;">Est. 2026</span>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <h3 style="color: #3D5040; margin-bottom: var(--space-lg);">Experience Hours</h3>
+                        <div style="color: #525051; line-height: var(--leading-relaxed);">
+                            <p><strong>Tuesday - Thursday:</strong> 8am - 8pm</p>
+                            <p><strong>Friday - Saturday:</strong> 8am - 9pm</p>
+                            <p><strong>Sunday:</strong> 9am - 6pm</p>
+                            <p><strong>Monday:</strong> Closed</p>
+                        </div>
+                        <p class="small" style="margin-top: var(--space-md); color: var(--color-sage);">Cat lounge closes 30 minutes before café</p>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <h3 style="color: #3D5040; margin-bottom: var(--space-lg);">Special Events</h3>
+                        <p>Private parties, yoga sessions, painting classes, and birthday celebrations available by appointment.</p>
+                        <div style="margin-top: var(--space-lg);">
+                            <a href="tel:630-768-4424" class="btn-outline">Book an Event</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER START -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Visit Us</h3>
+                    <ul class="footer-links">
+                        <li><strong>Naperville, IL</strong></li>
+                        <li>630-768-4424</li>
+                        <li>cnovak626@gmail.com</li>
+                        <li>@littleowl.catcafe</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Experience</h3>
+                    <ul class="footer-links">
+                        <li><a href="/experience">The Café</a></li>
+                        <li><a href="/experience">Cat Lounge</a></li>
+                        <li><a href="/experience">Events & Classes</a></li>
+                        <li><a href="/experience">Private Parties</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Adoption</h3>
+                    <ul class="footer-links">
+                        <li><a href="/adopt">Available Cats</a></li>
+                        <li><a href="/adopt">Adoption Process</a></li>
+                        <li><a href="/adopt">Foster Program</a></li>
+                        <li><a href="/adopt">Volunteer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="/contact">Contact & Reserve</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Little Owl Cat Café & Rescue. Veterinary-led. Woman-owned. Est. 2026.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var allAnimated = document.querySelectorAll('.fade-in, .fade-left, .fade-right');
+      allAnimated.forEach(function(el) { el.classList.add('visible'); });
+
+      if ('IntersectionObserver' in window) {
+        var belowFold = [];
+        allAnimated.forEach(function(el) {
+          if (el.getBoundingClientRect().top > window.innerHeight) {
+            el.classList.remove('visible');
+            belowFold.push(el);
+          }
+        });
+        if (belowFold.length > 0) {
+          var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1 });
+          belowFold.forEach(function(el) { observer.observe(el); });
+        }
+      }
+
+      var toggle = document.querySelector('.mobile-menu-toggle');
+      var mobileNav = document.querySelector('.mobile-nav');
+      if (toggle && mobileNav) {
+        toggle.addEventListener('click', function() { mobileNav.classList.toggle('open'); });
+      }
+
+      var header = document.querySelector('.site-header');
+      if (header) {
+        window.addEventListener('scroll', function() {
+          header.classList.toggle('scrolled', window.scrollY > 10);
+        });
+      }
+    });
+    </script>
+</body>
+</html>
